@@ -17,7 +17,6 @@ int main(void) {
     mojito->alcoholPercent = 40;
     stampa(mojito);
 
-
     Cocktail *angelo = malloc(sizeof(Cocktail));
     angelo->nome = "Angelo Azzurro";
     angelo->price = 8.5f;
@@ -40,5 +39,5 @@ int main(void) {
 void stampa(Cocktail *cocktail) {
     printf("%s:\n", cocktail->nome);
     printf("Price: %.2feur\t", cocktail->price);
-    printf("%d%% alcohol", cocktail->alcoholPercent);
+    printf("%d%% alcohol\n", cocktail->alcoholPercent);
 }
