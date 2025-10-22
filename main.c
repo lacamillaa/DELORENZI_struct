@@ -16,8 +16,24 @@ int main(void) {
     mojito->price = 3.5f;
     mojito->alcoholPercent = 40;
     stampa(mojito);
+
+
+    Cocktail *angelo = malloc(sizeof(Cocktail));
+    angelo->nome = "Angelo Azzurro";
+    angelo->price = 8.5f;
+    angelo->alcoholPercent = 50;
+    stampa(angelo);
+
+    Cocktail *listino_malloc = malloc(10 * sizeof(Cocktail));
+    listino_malloc[0] = *mojito;
+    listino_malloc[1] = *angelo;
+
     free(mojito);
     mojito = NULL;
+    free(angelo);
+    angelo = NULL;
+    free(listino_malloc);
+    listino_malloc = NULL;
     return 0;
 }
 
