@@ -8,5 +8,9 @@ struct Cocktail {
 };
 
 int main(void) {
+    struct Cocktail mojito;
+    mojito.nome = "Mojito";
+    mojito.price = 3.5f;
+    mojito.alcoholPercent = 40;
     return 0;
 }
